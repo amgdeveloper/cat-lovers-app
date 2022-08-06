@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/IdTitle"
+            style="@style/headerStyleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/barrier"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:barrierMargin="10dp"
+            app:constraint_referenced_ids="IdTitle,albumIdTitle,titleTitle" />
+
+        <TextView
+            android:id="@+id/idDesc"
+            style="@style/customTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="222"
+            app:layout_constraintLeft_toRightOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@id/IdTitle">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/albumIdTitle"
+            style="@style/headerStyleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/album"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IdTitle" />
+
+        <TextView
+            android:id="@+id/albumIdDesc"
+            style="@style/customTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="111"
+            app:layout_constraintLeft_toRightOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/albumIdTitle" />
+
+        <TextView
+            android:id="@+id/titleTitle"
+            style="@style/headerStyleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/albumIdTitle" />
+
+        <TextView
+            android:id="@+id/titleDesc"
+            style="@style/customTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            app:layout_constraintLeft_toRightOf="@id/barrier"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/titleTitle" />
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleDesc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

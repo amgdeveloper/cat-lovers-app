@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imageListFragment">
+
+    <fragment
+        android:id="@+id/imageListFragment"
+        android:name="com.amgdeveloper.imagedetailviewer.ui.ImageListFragment"
+        android:label="ImageListFragment" >
+        <action
+            android:id="@+id/action_imageListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.amgdeveloper.imagedetailviewer.ui.DetailFragment"
+        android:label="DetailFragment" >
+
+        <argument
+            android:name="image_photo_extra"
+            app:argType="com.amgdeveloper.imagedetailviewer.model.ImageData" />
+    </fragment>
+</navigation>
