@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/imageListFragment"
-        android:name="com.amgdeveloper.imagedetailviewer.ui.ImageListFragment"
+        android:name="com.amgdeveloper.catlovers.ui.ImageListFragment"
         android:label="ImageListFragment" >
         <action
             android:id="@+id/action_imageListFragment_to_detailFragment"
@@ -14,11 +14,11 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.amgdeveloper.imagedetailviewer.ui.DetailFragment"
+        android:name="com.amgdeveloper.catlovers.ui.DetailFragment"
         android:label="DetailFragment" >
 
         <argument
             android:name="image_photo_extra"
-            app:argType="com.amgdeveloper.imagedetailviewer.model.ImageData" />
+            app:argType="com.amgdeveloper.catlovers.model.ImageData" />
     </fragment>
 </navigation>
